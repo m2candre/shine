@@ -1,21 +1,15 @@
-#---
-# Excerpted from "Rails, Angular, Postgres, and Bootstrap",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material,
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose.
-# Visit http://www.pragmaticprogrammer.com/titles/dcbang for more book information.
-#---
 require File.expand_path('../boot', __FILE__)
 
+require 'rails/all'
+
 # Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "sprockets/railtie"
+#require "active_model/railtie"
+#require "active_job/railtie"
+#require "active_record/railtie"
+#require "action_controller/railtie"
+#require "action_mailer/railtie"
+#require "action_view/railtie"
+#require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -41,5 +35,8 @@ module Shine
     else
       config.active_record.raise_in_transactional_callbacks = true
     end
+
+    #For Bower
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
   end
 end
