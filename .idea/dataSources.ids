@@ -10,13 +10,13 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-timestamp>2016-05-07.00:28:35.993</introspection-timestamp>
+        <introspection-timestamp>2016-05-10.20:45:45.798</introspection-timestamp>
       </schema>
       <schema id="3" parent="1" name="pg_catalog">
         <object-id>11</object-id>
         <comment>system catalog schema</comment>
         <introspection-state-number>662</introspection-state-number>
-        <introspection-timestamp>2016-05-07.00:28:36.234</introspection-timestamp>
+        <introspection-timestamp>2016-05-10.20:45:46.110</introspection-timestamp>
       </schema>
       <table id="4" parent="3" name="pg_aggregate">
         <object-id>2600</object-id>
@@ -58623,7 +58623,7 @@ umserver</columns>
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
         <introspection-state-number>673</introspection-state-number>
-        <introspection-timestamp>2016-05-07.12:16:02.283</introspection-timestamp>
+        <introspection-timestamp>2016-05-10.20:45:45.797</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="users_id_seq">
         <object-id>24586</object-id>
