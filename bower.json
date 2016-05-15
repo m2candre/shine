@@ -1,9 +1,7 @@
 {
   "name": "shine",
   "homepage": "https://github.com/m2candre/shine",
-  "authors": [
-    "Marcos Andre <m2c.andre@gmail.com>"
-  ],
+  "authors": ["Marcos Andre <m2c.andre@gmail.com>"],
   "description": "",
   "main": "",
   "license": "MIT",
