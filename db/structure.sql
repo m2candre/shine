@@ -92,9 +92,9 @@ CREATE TABLE users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    CONSTRAINT email_must_be_company_email CHECK (((email)::text ~* '[A-Za-z0-9._%-]+@example\.com'::text))
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    CONSTRAINT email_must_be_company_email CHECK (((email)::text ~* '[A-Za-z0-9._%-]+@example.com'::text))
 );
 
 
@@ -148,6 +148,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: customers_lower_email; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX customers_lower_email ON customers USING btree (lower((email)::text));
+
+
+--
+-- Name: customers_lower_first_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX customers_lower_first_name ON customers USING btree (lower((first_name)::text));
+
+
+--
+-- Name: customers_lower_last_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX customers_lower_last_name ON customers USING btree (lower((last_name)::text));
+
+
+--
 -- Name: index_customers_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -188,9 +209,11 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 
 SET search_path TO "$user", public;
 
-INSERT INTO schema_migrations (version) VALUES ('20160507014006');
+INSERT INTO schema_migrations (version) VALUES ('20150228234349');
 
-INSERT INTO schema_migrations (version) VALUES ('20160512010153');
+INSERT INTO schema_migrations (version) VALUES ('20150303133619');
 
-INSERT INTO schema_migrations (version) VALUES ('20160512025213');
+INSERT INTO schema_migrations (version) VALUES ('20150304140122');
+
+INSERT INTO schema_migrations (version) VALUES ('20150308225243');
 

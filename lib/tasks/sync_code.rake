@@ -6,6 +6,7 @@ desc "Sync code in this repo with the book's code/ directory"
 task :sync_code => :spec do
   current_branch = `git rev-parse --abbrev-ref HEAD`.chomp
   fail "You should run this from the branch in question" if current_branch == "master"
+  fail "Your branch should have a slash in it for the chapter name" unless current_branch =~ /\//
   changed_files = `git status --porcelain`.split("\n")
   fail "ERROR: You have local changes" unless changed_files.empty?
 

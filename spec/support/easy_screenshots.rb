@@ -24,7 +24,9 @@ module EasyScreenshots
                 { selector: selector }
               end
 
-    save_screenshot("#{RSpec.configuration.screenshots_dir}/#{filename}", options)
+    screenshot_filename = "#{RSpec.configuration.screenshots_dir}/#{filename}"
+    FileUtils.rm(screenshot_filename) if File.exists?(screenshot_filename)
+    save_screenshot(screenshot_filename, options)
   end
 
   # Like within, but takes a screenshot after the innards are executred.  Only works with

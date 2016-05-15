@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.0'
+
 gem 'rails', github: 'rails/rails'
 gem 'arel',  github: 'rails/arel'
 gem 'pg'
@@ -10,8 +12,13 @@ gem 'jquery-rails'
 gem 'jbuilder'
 gem 'rails_12factor', group: :production
 gem 'puma'
+gem 'devise', git: 'git@github.com:davetron5000/devise.git', branch: 'remove-hide-action'
+gem 'bower-rails'
+gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
