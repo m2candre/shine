@@ -1,19 +1,17 @@
-<article>
+<article ng-app="angular_test"​>
   <header>
-    <h1></h1>
-  </header>
+    <h1 ng-if="name"​>
+      Hello, {{name}}
+    </h1> ​
+  </header> ​
   <section>
-    <form action="">
-      <div>
-        <label for="">
-
+    <form class="form-inline"​>
+      <div class="form-group"​>
+        <label for="name"​>
+          Name
         </label>
-        <imput>
-
-        </imput>
-      </div>
-    </form>
-  </section>
+        <input class="form-control" name="name" type="text" placeholder="Enter your name" autofocus ng-model="name"​> ​
+      </div> ​
+    </form> ​
+  </section> ​
 </article>
-
-Página 112-113
