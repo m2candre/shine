@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4185117972">
+  <component name="DataSourceManagerImpl" format="xml" hash="790378351">
     <data-source source="LOCAL" name="Rails shine: test" uuid="3149232d-1649-46d6-9fb5-10ae9a8751b0">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
